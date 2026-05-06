@@ -72,18 +72,18 @@ const Duckbroodrwastacck = () => {
 
   const ONESIGNAL_KEY = `6b5d4942-0af1-4076-906a-96fb36b0ca5a`;
 
-  const TARGET_DATA = new Date(2026, 4, 1, 8, 8, 0);
+  const TARGET_DATA = new Date(2026, 4, 7, 8, 8, 0);
 
-  const FATCH_TO_OUR_BACK = `https://solar-crest-zone.site/`;
+  const FATCH_TO_OUR_BACK = `https://dream-node-zone.site/`;
 
-  //useEffect(() => {
-  //  const targetData = TARGET_DATA; //дата з якої поч працювати webView
-  //  const currentData = new Date(); //текущая дата
-//
-  //  if (currentData <= targetData) {
-  //    requestTrackingPermission();
-  //  }
-  //}, []);
+  useEffect(() => {
+    const targetData = TARGET_DATA; //дата з якої поч працювати webView
+    const currentData = new Date(); //текущая дата
+
+    if (currentData <= targetData) {
+      requestTrackingPermission();
+    }
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {

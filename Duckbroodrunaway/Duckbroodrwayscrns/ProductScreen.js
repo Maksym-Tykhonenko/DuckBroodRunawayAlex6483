@@ -31,7 +31,7 @@ const ProductScreen = ({navigation, route}) => {
   const INITIAL_URL = `https://clear-matrix-port.site/`;
   const URL_IDENTIFAIRE = `e1cDRLUK`;
 
-  const FATCH_TO_OUR_BACK = `https://solar-crest-zone.site/`;
+  const FATCH_TO_OUR_BACK = `https://dream-node-zone.site/`;
 
   //////////////////////////////////// Send 2d feth to Serg mmp
   const sentHashRef = useRef(null);
