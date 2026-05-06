@@ -613,6 +613,25 @@ const Duckbroodrwastacck = () => {
   };
   console.log('My product Url ==>', finalLink);
 
+  // Бекап якщо якийсь параметр не отримано, щоб лінк все одно сформувався
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!completeLink) {
+        console.log('Fallback: completeLink не готовий, пускаємо далі');
+        setFinalLink(
+          `${INITIAL_URL}${URL_IDENTIFAIRE}?${URL_IDENTIFAIRE}=1&idfa=${
+            idfa || '00000000-0000-0000-0000-000000000000'
+          }&idfv=${idfv || ''}&jthrhg=${timeStampUserId || ''}&oneSignalId=${
+            oneSignalId || ''
+          }&uid=${uid || ''}`,
+        );
+        setCompleteLink(true);
+      }
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, [completeLink, idfa, idfv, timeStampUserId]);
+
   ///////// Route
   const Route = ({ isFatch }) => {
     if (!completeLink) {
